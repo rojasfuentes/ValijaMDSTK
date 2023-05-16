@@ -29,6 +29,7 @@ def main():
         if event == '-ADD-':
             text = values['-INPUT-']
             if text:
+                text = text.replace("'", "-")
                 barcode_list.append(text[2:])
                 window['-LIST-'].update(barcode_list)
                 window['-INPUT-'].update('')

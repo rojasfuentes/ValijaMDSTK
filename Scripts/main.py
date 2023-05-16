@@ -40,9 +40,10 @@ if new_barcode_list:
     new_df = new_df.iloc[:, [7, 0, 1, 2, 3, 4, 6, 5, 10, 8, 9]]
     new_df.columns = ['No', 'Division', 'Delivery', 'Destino', 'Municipio', 'Estado', 'Fecha de embarque', 'Fecha de entrega', 'Fecha de registro de evidencia', 'No. Factura', 'No. Valija']
 
-    with pd.ExcelWriter(formato_path, mode='a', if_sheet_exists='overlay') as writer:
-        limpiar.to_excel(writer, sheet_name='VALIJA GENERAL', startrow=9, startcol=1, header=None, index=None)
-        new_df.to_excel(writer, sheet_name='VALIJA GENERAL', startrow=9, startcol=1, header=None, index=None)
+    with pd.ExcelWriter(formato_path, mode='a', if_sheet_exists='new') as writer:
+        limpiar.to_excel(writer, sheet_name='VALIJA GENERAL NUEVA', startrow=4, startcol=0, header=None, index=None)
+        df.to_excel(writer, sheet_name='VALIJA GENERAL NUEVA', startrow=4, startcol=0, header=None, index=None)
+
 
     print("¡Se ha completado la escritura del archivo!")
 else:
