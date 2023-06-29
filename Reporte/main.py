@@ -48,9 +48,7 @@ else:
 
 
 
-""" 
-sampleError
-DESTRUMPNOV
+""" DESTRUMPNOV
 16004343
 16004344
 DE-23-001

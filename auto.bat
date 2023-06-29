@@ -1,4 +1,4 @@
 call env\Scripts\activate.bat
-cd Scripts
+cd Reporte
 python main.py
 
